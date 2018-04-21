@@ -6,25 +6,22 @@ var
 	newGameBtn = document.getElementById('js-newGameButton'),
 	pickRock = document.getElementById('js-playerPick_rock'),
 	pickPaper = document.getElementById('js-playerPick_paper'),
-	pickScissors = document.getElementById('js-playerPick_scissors');
+    pickScissors = document.getElementById('js-playerPick_scissors'),
+    pickLizard = document.getElementById('js-playerPick_lizard'),
+	pickSpock = document.getElementById('js-playerPick_spock');
 
-
+console.log(pickLizard);
 // declaration player and computer veriables
 
 var 
 	gameState = 'notStarted',  //started // ended //notStarted
     player = {
         name: '',
-        score: 10
+        score: 0
     },
     computer = {
         score: 0
     };
-
-console.log('czytam punkty z obiektu ' + player.score);
-player.score++;
-console.log('czytam punkty z obiektu ' + player.score);
-
 
 // game containers
 var 
@@ -52,10 +49,6 @@ var
 
 //			FUNCTIONS
 
-console.log(gameState);
-console.log(pickElem);
-//playerPointsElem.innerHTML = 'kikiki';
-console.log(playerPointsElem);
 
 // seting up points
 function setGamePoints() {
@@ -97,8 +90,8 @@ function setGameElements() {
 
 // generating a computer choice
 function getComputerPick() {
-    var possiblePicks = ['rock', 'paper', 'scissors'];
-    return possiblePicks[Math.floor(Math.random()*3)];  // generate a number 0-2
+    var possiblePicks = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+    return possiblePicks[Math.floor(Math.random()*5)];  // generate a number 0-5
 }
 
 // puting in the html code the player and the computer choices
@@ -114,8 +107,6 @@ function playerPick(playerPick) {
 
 // checking who wins
 function checkRoundWinner(playerPick, computerPick) {
-	console.log('punkty gracza z wewnatrz funkcji' + player.score);
-
   playerResultElem.innerHTML = computerResultElem.innerHTML = '';
 
   var winnerIs = 'player';
@@ -124,19 +115,26 @@ function checkRoundWinner(playerPick, computerPick) {
         winnerIs = 'none'; // remis
     } else if (
         (computerPick == 'rock' &&  playerPick == 'scissors') ||
+        (computerPick == 'rock' &&  playerPick == 'lizard') ||
+        (computerPick == 'paper' &&  playerPick == 'spock') ||
+        (computerPick == 'paper' &&  playerPick == 'rock') ||
         (computerPick == 'scissors' &&  playerPick == 'paper') ||
-        (computerPick == 'paper' &&  playerPick == 'rock')) {
+        (computerPick == 'scissors' &&  playerPick == 'lizard') ||
+        (computerPick == 'lizard' &&  playerPick == 'spock') ||
+        (computerPick == 'lizard' &&  playerPick == 'paper') ||
+        (computerPick == 'spock' &&  playerPick == 'scissors') ||
+        (computerPick == 'spock' &&  playerPick == 'rock')) {
 
         winnerIs = 'computer';
     }
 
     if (winnerIs == 'player') {
-        playerResultElem.innerHTML = "Winkkkkk!";
+        playerResultElem.innerHTML = "Win!";
         //document.write('wygrywa gracz');
         player.score++;
         console.log('punkty gracza w funkcji' + player.score);
     } else if (winnerIs == 'computer') {
-        computerResultElem.innerHTML = "Winuuuuu!";
+        computerResultElem.innerHTML = "Win!";
         computer.score++;
     } else {
     	computerResultElem.innerHTML = playerResultElem.innerHTML = "Draw";
@@ -144,9 +142,6 @@ function checkRoundWinner(playerPick, computerPick) {
     setGamePoints(); 
     finishGame(); 
 }
-
-console.log('punkty gracza po funkcji' + player.score);
-console.log('punkty komputera' + computer.score);
 
 // seting up points
 function setGamePoints() {
@@ -159,7 +154,7 @@ function setGamePoints() {
 
 function finishGame(){
 	var wygrywa = player.name;
-	if (player.score == 3 || computer.score == 3){
+	if (player.score == 10 || computer.score == 10){
 		if (computer.score > player.score){
 			wygrywa = 'Komputer';
 		}
@@ -179,6 +174,8 @@ newGameBtn.addEventListener('click', newGame);
 pickRock.addEventListener('click', function() { playerPick('rock') });
 pickPaper.addEventListener('click', function() { playerPick('paper') });
 pickScissors.addEventListener('click', function() { playerPick('scissors') });
+pickLizard.addEventListener('click', function() { playerPick('lizard') });
+pickSpock.addEventListener('click', function() { playerPick('spock') });
 
 
 setGameElements();
