@@ -3,4 +3,9 @@
   border: 1px solid red;
 }
 
+.player_person {
+  cursor: pointer;
+  width: 120px;
+}
+
 /*# sourceMappingURL=style.css.map */
