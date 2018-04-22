@@ -150,8 +150,8 @@ function getComputerPick() {
 function playerPick(playerPick) {
     computerPick = getComputerPick();
 
-    playerPickElem.innerHTML = 'hits with ' + playerPick;
-    computerPickElem.innerHTML = 'hits with ' + computerPick;
+    playerPickElem.innerHTML = 'hits with ' + playerPick + '.';
+    computerPickElem.innerHTML = 'hits with ' + computerPick + '.';
     checkRoundWinner(playerPick, computerPick);
 }
 
@@ -218,11 +218,11 @@ function printTheMessage (winnerIs){
 
 function finishGame(){
 	var wygrywa = player.name;
-	if (player.score == 2 || computer.score == 2){
+	if (player.score == 10 || computer.score == 10){
 		if (computer.score > player.score){
 			wygrywa = 'Dr Sheldon Kooper';
 		}
-		alert('koniec gry. Wygrywa ' + wygrywa);
+		alert('Koniec gry. Wygrywa ' + wygrywa);
 		gameState = 'ended';
 		setGameElements()
 	}

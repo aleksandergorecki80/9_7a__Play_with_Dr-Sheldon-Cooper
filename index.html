@@ -131,28 +131,32 @@
 			<h3 class="text-center">Choose the weapon</h3>
 			<div class="row text-center">
 				<div id="js-playerPick_rock" class="btn">
-						<img src="images/rock.png" alt="Rock" />
+					
+						<img src="images/rock.png" alt="Rock" data-toggle="tooltip" data-placement="bottom" title="Rock crushes lizard and scissors" />
+					
 				</div>
 				<div id="js-playerPick_paper"  class="btn">
-						<img src="images/paper.png" alt="Paper" />
+						<img src="images/paper.png" alt="Paper" data-toggle="tooltip" data-placement="bottom" title="Paper covers rock and disproves Spock" />
 				</div>
 				<div id="js-playerPick_scissors"  class="btn">
-					<img src="images/scizors.jpg" alt="Scissors" />
+					<img src="images/scizors.jpg" alt="Scissors" data-toggle="tooltip" data-placement="bottom" title="Scissors cuts paper and decapitate Lizard"/>
 				</div>
 				<div id="js-playerPick_lizard"  class="btn">
-						<img src="images/lizard.png" alt="Lizard" />
+						<img src="images/lizard.png" alt="Lizard" data-toggle="tooltip" data-placement="bottom" title="Lizard poisons Spock and eat Paper"/>
 				</div>
 				<div id="js-playerPick_spock"  class="btn">
-					<img src="images/spock.png" alt="Spock" />
+					<img src="images/spock.png" alt="Spock" data-toggle="tooltip" data-placement="bottom" title="Spock smashes scissors and vaporizes Rock"/>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- Score table -->
 <div id="js-resultsTableElement" class="container">
+
+
 	<div class="row flex-center">
 		<div class="col-xs-5 text-center">
-			<span id="js-playerPoints" class="badge">
+			10 / <span id="js-playerPoints">
 				0
 			</span>
 			<div class="player-photo">
@@ -161,48 +165,36 @@
 			<span id="js-playerName">
 				Player Name
 			</span>
+			<span id="js-playerPick" class="weapon-name">
+				Player selection
+			</span>
+			<p id="js-playerResult">
+				Player Score
+			</p>
 		</div>
+
 		<div class="col-xs-2 text-center">
 			VS.
 			<p id="js-message"></p>
 		</div>
+		
+
 		<div class="col-xs-5 text-center">
-			<span id="js-computerPoints" class="badge">
+			10 / <span id="js-computerPoints">
 				0
 			</span>
 			<div class="player-photo">
 				<img src="images/sheldon-lee-cooper.jpg" alt="Sheldon Cooper" />
 			</div>
-			<p>Sheldon Cooper</p>	
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-xs-5 text-center">
-			
-			<span id="js-playerPick" class="weapon-name">
-				Player selection
-			</span>
-		</div>
-		<div class="col-xs-2"></div>
-		<div class="col-xs-5 text-center">
+			<span>Sheldon Cooper</span>
 			<span id="js-computerPick">
 				Computer selection
 			</span>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-xs-5 text-center">
-			<span id="js-playerResult">
-				Player Score
-			</span>
-		</div>
-		<div class="col-xs-2"></div>
-		<div class="col-xs-5 text-center">
-			<span id="js-computerResult">
+			<p id="js-computerResult">
 				Computer Score
-			</span>
+			</p>	
 		</div>
-	</div>
+	</div>	
 </div>
 
 
@@ -211,5 +203,11 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 <script type="text/javascript" src="js/script.js"></script>
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
 </body>
 </html>
