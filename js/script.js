@@ -123,7 +123,7 @@ function setGameElements() {
         computerPickElem.innerHTML = '';
         playerResultElem.innerHTML = '';
         computerResultElem.innerHTML = '';
-        messageElem.innerHTML = '';
+        
 
       break;
     case 'ended':
@@ -133,6 +133,7 @@ function setGameElements() {
         newGameElem.style.display = 'block';
         pickElem.style.display = 'none';    //none
         resultsElem.style.display = 'none';
+        messageElem.innerHTML = 'Battle status.';
   }
 }
 
@@ -211,7 +212,7 @@ function printTheMessage (winnerIs){
     } else {
         winnerIs = 'No one';
     }
-    messageElem.innerHTML = winnerIs + ' wins this round.<br> Hit again.'
+    messageElem.innerHTML = winnerIs + ' wins this round.<br> Hit again !'
 }
 
 //finishing the game

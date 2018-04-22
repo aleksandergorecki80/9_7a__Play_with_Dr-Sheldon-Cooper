@@ -1,21 +1,24 @@
 @import 'grid';
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,900');
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash');
 
+
+$main-color: #2C6444;
 
 * {
 	box-sizing: border-box;
-//    border: 1px solid red;
+    //border: 1px solid red;
 
+}
+
+body {
+    font-family: 'Lato', sans-serif;
 }
 
 .flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.player_person {
-    cursor: pointer;
-    width: 120px;
 }
 
 
@@ -29,11 +32,19 @@
     }
 }
 
+.player_person {
+    cursor: pointer;
+    width: 120px;
+}
+
 .buttons {
     margin-top: 30px;
 }
 
 .modal-section {
+    .modal-content{
+        padding: 10px;
+    }
     .container {
         width: 100%;
     }
@@ -58,11 +69,44 @@
 }
 
 .wepon {
+    .container{
+        width: 70%;
+    }
+    h3 {
+        background-color: $main-color;
+        color: white;
+        padding: 10px 0;
+        border-radius: 5px;
+    }
     img {
         height: 100px;
+    }
+    .weapon-list{
+        border-bottom: 2px solid $main-color;
     }
 }
 
 .wepon-name{
     text-transform: capitalize;
+}
+
+.score-table{
+    h1 {
+        font-family: 'Berkshire Swash', cursive;
+        color: #c40608;
+    }
+    .message {
+        background-color: $main-color;
+        color: white;
+        padding: 10px 30px;
+        border-radius: 5px;
+    }
+    .current-score {
+        background-color: $main-color;
+        color: white;
+        border-radius: 5px;
+        max-width: 50px;
+        margin: 0 auto;
+        padding: 5px;
+    }
 }

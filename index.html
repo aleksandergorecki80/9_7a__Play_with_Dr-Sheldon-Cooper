@@ -46,7 +46,7 @@
 				<div class="modal-dialog">
 					<div class="modal-content text-center">
 						<!-- our content -->
-						<h2>Chose the character to play as:</h2>
+						<h4>Chose the character to play as:</h4>
 						<!--	Choosing a player -->	
 						<div id="js-playerPickPerson" class="container">
 							<div class="row text-center">
@@ -127,76 +127,79 @@
 
 	<!--	Choosing a wepon -->
 	<section class="wepon">	
-		<div id="js-playerPickElement" class="container">
-			<h3 class="text-center">Choose the weapon</h3>
-			<div class="row text-center">
-				<div id="js-playerPick_rock" class="btn">
-					
-						<img src="images/rock.png" alt="Rock" data-toggle="tooltip" data-placement="bottom" title="Rock crushes lizard and scissors" />
-					
-				</div>
-				<div id="js-playerPick_paper"  class="btn">
-						<img src="images/paper.png" alt="Paper" data-toggle="tooltip" data-placement="bottom" title="Paper covers rock and disproves Spock" />
-				</div>
-				<div id="js-playerPick_scissors"  class="btn">
-					<img src="images/scizors.jpg" alt="Scissors" data-toggle="tooltip" data-placement="bottom" title="Scissors cuts paper and decapitate Lizard"/>
-				</div>
-				<div id="js-playerPick_lizard"  class="btn">
-						<img src="images/lizard.png" alt="Lizard" data-toggle="tooltip" data-placement="bottom" title="Lizard poisons Spock and eat Paper"/>
-				</div>
-				<div id="js-playerPick_spock"  class="btn">
-					<img src="images/spock.png" alt="Spock" data-toggle="tooltip" data-placement="bottom" title="Spock smashes scissors and vaporizes Rock"/>
+		<div class="container">
+			<div id="js-playerPickElement">
+				<h3 class="text-center">Choose the weapon</h3>
+				<div class="row text-center weapon-list">
+					<div id="js-playerPick_rock" class="btn">
+						
+							<img src="images/rock.png" alt="Rock" data-toggle="tooltip" data-placement="bottom" title="Rock crushes lizard and scissors" />
+						
+					</div>
+					<div id="js-playerPick_paper"  class="btn">
+							<img src="images/paper.png" alt="Paper" data-toggle="tooltip" data-placement="bottom" title="Paper covers rock and disproves Spock" />
+					</div>
+					<div id="js-playerPick_scissors"  class="btn">
+						<img src="images/scizors.jpg" alt="Scissors" data-toggle="tooltip" data-placement="bottom" title="Scissors cuts paper and decapitate Lizard"/>
+					</div>
+					<div id="js-playerPick_lizard"  class="btn">
+							<img src="images/lizard.png" alt="Lizard" data-toggle="tooltip" data-placement="bottom" title="Lizard poisons Spock and eat Paper"/>
+					</div>
+					<div id="js-playerPick_spock"  class="btn">
+						<img src="images/spock.png" alt="Spock" data-toggle="tooltip" data-placement="bottom" title="Spock smashes scissors and vaporizes Rock"/>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- Score table -->
-<div id="js-resultsTableElement" class="container">
+	<section class="score-table">
+		<div id="js-resultsTableElement" class="container">
+			<div class="row flex-center">
+				<div class="col-xs-5 text-center">
+					<div class="current-score">
+						<span id="js-playerPoints">
+							0
+						</span> / 10
+					</div>
+					<div class="player-photo">
+						<img id="js-characterPhoto" src=" " alt=" " />
+					</div>
+					<span id="js-playerName">
+						Player Name
+					</span>
+					<span id="js-playerPick" class="weapon-name">
+						Player selection
+					</span>
+					<p id="js-playerResult">
+						Player Score
+					</p>
+				</div>
 
-
-	<div class="row flex-center">
-		<div class="col-xs-5 text-center">
-			10 / <span id="js-playerPoints">
-				0
-			</span>
-			<div class="player-photo">
-				<img id="js-characterPhoto" src=" " alt=" " />
-			</div>
-			<span id="js-playerName">
-				Player Name
-			</span>
-			<span id="js-playerPick" class="weapon-name">
-				Player selection
-			</span>
-			<p id="js-playerResult">
-				Player Score
-			</p>
+				<div class="col-xs-2 text-center">
+					<h1>VS</h1>
+					<p id="js-message" class="message"></p>
+				</div>
+				<div class="col-xs-5 text-center">
+					<div class="current-score">
+						<span id="js-computerPoints">
+							0
+						</span> / 10
+					</div>
+					<div class="player-photo">
+						<img src="images/sheldon-lee-cooper.jpg" alt="Sheldon Cooper" />
+					</div>
+					<span>Sheldon Cooper</span>
+					<span id="js-computerPick">
+						Computer selection
+					</span>
+					<p id="js-computerResult">
+						Computer Score
+					</p>	
+				</div>
+			</div>	
 		</div>
-
-		<div class="col-xs-2 text-center">
-			VS.
-			<p id="js-message"></p>
-		</div>
-		
-
-		<div class="col-xs-5 text-center">
-			10 / <span id="js-computerPoints">
-				0
-			</span>
-			<div class="player-photo">
-				<img src="images/sheldon-lee-cooper.jpg" alt="Sheldon Cooper" />
-			</div>
-			<span>Sheldon Cooper</span>
-			<span id="js-computerPick">
-				Computer selection
-			</span>
-			<p id="js-computerResult">
-				Computer Score
-			</p>	
-		</div>
-	</div>	
-</div>
-
+	</section>
 
 	
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>

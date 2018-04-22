@@ -1,5 +1,7 @@
 /*		---	GRID	---		*/
 /*		columns size	*/
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700,900");
+@import url("https://fonts.googleapis.com/css?family=Berkshire+Swash");
 .col-1 {
   width: 8.33%;
 }
@@ -201,15 +203,14 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Lato', sans-serif;
+}
+
 .flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.player_person {
-  cursor: pointer;
-  width: 120px;
 }
 
 .header .container {
@@ -221,8 +222,17 @@
   margin: 0 auto;
 }
 
+.player_person {
+  cursor: pointer;
+  width: 120px;
+}
+
 .buttons {
   margin-top: 30px;
+}
+
+.modal-section .modal-content {
+  padding: 10px;
 }
 
 .modal-section .container {
@@ -248,12 +258,48 @@
   width: 120px;
 }
 
+.wepon .container {
+  width: 70%;
+}
+
+.wepon h3 {
+  background-color: #2C6444;
+  color: white;
+  padding: 10px 0;
+  border-radius: 5px;
+}
+
 .wepon img {
   height: 100px;
 }
 
+.wepon .weapon-list {
+  border-bottom: 2px solid #2C6444;
+}
+
 .wepon-name {
   text-transform: capitalize;
+}
+
+.score-table h1 {
+  font-family: 'Berkshire Swash', cursive;
+  color: #c40608;
+}
+
+.score-table .message {
+  background-color: #2C6444;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 5px;
+}
+
+.score-table .current-score {
+  background-color: #2C6444;
+  color: white;
+  border-radius: 5px;
+  max-width: 50px;
+  margin: 0 auto;
+  padding: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
