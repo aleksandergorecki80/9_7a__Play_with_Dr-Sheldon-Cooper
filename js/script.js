@@ -122,13 +122,15 @@ function setGameElements() {
         newGameElem.style.display = 'none';
         pickElem.style.display = 'block';
         resultsElem.style.display = 'block';
-        //  wstawione
+        
+        //  reseting the game
         playerPickElem.innerHTML = '';
         computerPickElem.innerHTML = '';
         playerResultElem.innerHTML = '';
         computerResultElem.innerHTML = '';
         
         ruleSection.style.display = "none";
+        roundNumber.innerHTML = 0;
       break;
     case 'ended':
         newGameBtn.innerText = 'Try again';
