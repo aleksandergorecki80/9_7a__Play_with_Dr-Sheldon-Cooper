@@ -130,10 +130,11 @@ function setGameElements() {
         computerResultElem.innerHTML = '';
         
         ruleSection.style.display = "none";
-        roundNumber.innerHTML = 0;
+        
       break;
     case 'ended':
         newGameBtn.innerText = 'Try again';
+        roundNumber.innerHTML = 0;
     case 'notStarted':
     default:
         newGameElem.style.display = 'block';
