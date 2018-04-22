@@ -199,6 +199,16 @@
 
 * {
   box-sizing: border-box;
+  border: 1px solid red;
+}
+
+.flex-center {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
 }
 
 .player_person {
