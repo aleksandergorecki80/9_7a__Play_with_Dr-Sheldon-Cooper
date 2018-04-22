@@ -39,7 +39,8 @@ var
 var 
 	newGameElem = document.getElementById('js-newGameElement'),
     pickElem = document.getElementById('js-playerPickElement'),
-    resultsElem = document.getElementById('js-resultsTableElement');
+    resultsElem = document.getElementById('js-resultsTableElement'),
+    messageElem = document.getElementById('js-message');
 
 
 //	computer points and player points and name displayed in score table
@@ -197,6 +198,8 @@ function setGamePoints() {
     playerPointsElem.innerHTML = player.score;
     computerPointsElem.innerHTML = computer.score;
 }
+
+function printTheMessage (){}
 
 //finishing the game
 
