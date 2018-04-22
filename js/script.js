@@ -95,16 +95,8 @@ function haracterPick(pickedHaracter){
 }
 
 
-
-
-
 // new game function - starting new game
 function newGame() {
-
-//  player.name = prompt('Please enter your name', 'imię gracza');
- 
-
-
   if (player.name) {
     player.score = computer.score = 0;
     gameState = 'started';
@@ -125,6 +117,12 @@ function setGameElements() {
         newGameElem.style.display = 'none';
         pickElem.style.display = 'block';
         resultsElem.style.display = 'block';
+        //  wstawione
+        playerPickElem.innerHTML = '';
+        computerPickElem.innerHTML = '';
+        playerResultElem.innerHTML = '';
+        computerResultElem.innerHTML = '';
+
       break;
     case 'ended':
         newGameBtn.innerText = 'Jeszcze raz';
@@ -143,11 +141,12 @@ function getComputerPick() {
     return possiblePicks[Math.floor(Math.random()*5)];  // generate a number 0-5
 }
 
+
 // puting in the html code the player and the computer choices
 // calling getCOmputerPick function
 //calling checkRound function
 function playerPick(playerPick) {
-    var computerPick = getComputerPick();
+    computerPick = getComputerPick();
 
     playerPickElem.innerHTML = playerPick;
     computerPickElem.innerHTML = computerPick;
@@ -203,7 +202,7 @@ function setGamePoints() {
 
 function finishGame(){
 	var wygrywa = player.name;
-	if (player.score == 10 || computer.score == 10){
+	if (player.score == 2 || computer.score == 2){
 		if (computer.score > player.score){
 			wygrywa = 'Dr Sheldon Kooper';
 		}
