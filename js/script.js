@@ -123,6 +123,7 @@ function setGameElements() {
         computerPickElem.innerHTML = '';
         playerResultElem.innerHTML = '';
         computerResultElem.innerHTML = '';
+        messageElem.innerHTML = '';
 
       break;
     case 'ended':
@@ -149,8 +150,8 @@ function getComputerPick() {
 function playerPick(playerPick) {
     computerPick = getComputerPick();
 
-    playerPickElem.innerHTML = playerPick;
-    computerPickElem.innerHTML = computerPick;
+    playerPickElem.innerHTML = 'hits with ' + playerPick;
+    computerPickElem.innerHTML = 'hits with ' + computerPick;
     checkRoundWinner(playerPick, computerPick);
 }
 
@@ -188,6 +189,7 @@ function checkRoundWinner(playerPick, computerPick) {
     } else {
     	computerResultElem.innerHTML = playerResultElem.innerHTML = "Draw";
     }
+    printTheMessage(winnerIs);
     setGamePoints(); 
     finishGame(); 
 }
@@ -199,7 +201,18 @@ function setGamePoints() {
     computerPointsElem.innerHTML = computer.score;
 }
 
-function printTheMessage (){}
+function printTheMessage (winnerIs){
+    console.log(winnerIs + 'wygrywa');
+    console.log(player.name);
+    if (winnerIs == 'player'){
+        winnerIs = player.name;
+    } else if (winnerIs == 'computer') {
+        winnerIs = 'Sheldon Cooper';
+    } else {
+        winnerIs = 'No one';
+    }
+    messageElem.innerHTML = winnerIs + ' wins this round.<br> Hit again.'
+}
 
 //finishing the game
 
