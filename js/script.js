@@ -8,7 +8,10 @@ var
 	pickPaper = document.getElementById('js-playerPick_paper'),
     pickScissors = document.getElementById('js-playerPick_scissors'),
     pickLizard = document.getElementById('js-playerPick_lizard'),
-	pickSpock = document.getElementById('js-playerPick_spock');
+    pickSpock = document.getElementById('js-playerPick_spock'),
+	showRules = document.getElementById('js-rules-bt');
+
+    console.log(showRules);
 
 // getting a chosen character
 var
@@ -19,8 +22,6 @@ var
     playAsPeny = document.getElementById('js-pickPerson_peny'),
     characterPhoto = document.getElementById('js-characterPhoto');
 
-
-console.log(characterPhoto + 'fota');
 
 
 // declaration player and computer veriables
@@ -41,8 +42,10 @@ var
     pickElem = document.getElementById('js-playerPickElement'),
     resultsElem = document.getElementById('js-resultsTableElement'),
     messageElem = document.getElementById('js-message');
-    roundNumber = document.getElementById('js-round-counter');
+    roundNumber = document.getElementById('js-round-counter'),
+    ruleSection = document.getElementById('js-rules-section');
 
+console.log(ruleSection);
 
 //	computer points and player points and name displayed in score table
 var 
@@ -220,6 +223,19 @@ function roundCounter(){
     roundNumber.innerHTML++;
 }
 
+
+//show rules
+
+function showRulesSection() {
+    
+    if (ruleSection.style.display === "none") {
+        ruleSection.style.display = "block";
+    } else {
+        ruleSection.style.display = "none";
+    }
+}
+
+
 //finishing the game
 
 function finishGame(){
@@ -255,6 +271,7 @@ playAsHoward.addEventListener('click', function() { haracterPick('howard') });
 playAsRajesh.addEventListener('click', function() { haracterPick('rajesh') });
 playAsLeonard.addEventListener('click', function() { haracterPick('leonard') });
 playAsPeny.addEventListener('click', function() { haracterPick('peny') });
+showRules.addEventListener('click', function() { showRulesSection() });
 
 
 setGameElements();

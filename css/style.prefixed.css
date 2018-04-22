@@ -254,6 +254,14 @@ body {
      object-fit: cover;
 }
 
+.rules-section {
+  display: none;
+}
+
+.rules-section .row {
+  margin: 20px;
+}
+
 .player-photo {
   margin-top: 10px;
 }
