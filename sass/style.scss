@@ -7,7 +7,7 @@ $main-color: #2C6444;
 
 * {
 	box-sizing: border-box;
-    //border: 1px solid red;
+//    border: 1px solid green;
 
 }
 
@@ -105,8 +105,19 @@ body {
         background-color: $main-color;
         color: white;
         border-radius: 5px;
-        max-width: 50px;
+        max-width: 70px;
         margin: 0 auto;
-        padding: 5px;
+        padding: 10px;
+    }
+    .win {
+        font-size: large;
+        color: white;
+        background-color: red;
+        max-width: 100px;
+        margin: 0 auto;
+    }
+    h2 {
+        font-weight: bold;
+        color: #014682;
     }
 }

@@ -41,6 +41,7 @@ var
     pickElem = document.getElementById('js-playerPickElement'),
     resultsElem = document.getElementById('js-resultsTableElement'),
     messageElem = document.getElementById('js-message');
+    roundNumber = document.getElementById('js-round-counter');
 
 
 //	computer points and player points and name displayed in score table
@@ -127,7 +128,7 @@ function setGameElements() {
 
       break;
     case 'ended':
-        newGameBtn.innerText = 'Jeszcze raz';
+        newGameBtn.innerText = 'Try again';
     case 'notStarted':
     default:
         newGameElem.style.display = 'block';
@@ -203,8 +204,7 @@ function setGamePoints() {
 }
 
 function printTheMessage (winnerIs){
-    console.log(winnerIs + 'wygrywa');
-    console.log(player.name);
+
     if (winnerIs == 'player'){
         winnerIs = player.name;
     } else if (winnerIs == 'computer') {
@@ -213,6 +213,11 @@ function printTheMessage (winnerIs){
         winnerIs = 'No one';
     }
     messageElem.innerHTML = winnerIs + ' wins this round.<br> Hit again !'
+    roundCounter();
+}
+
+function roundCounter(){
+    roundNumber.innerHTML++;
 }
 
 //finishing the game
@@ -228,6 +233,8 @@ function finishGame(){
 		setGameElements()
 	}
 }
+
+
 
 
 // 		BUTTONS
