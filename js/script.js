@@ -16,12 +16,13 @@ var
     playAsRajesh = document.getElementById('js-pickPerson_rajesh');
     playAsLeonard = document.getElementById('js-pickPerson_leonard');
     playAsRajesh = document.getElementById('js-pickPerson_rajesh');
-    playAsPeny = document.getElementById('js-pickPerson_peny');
+    playAsPeny = document.getElementById('js-pickPerson_peny'),
+    characterPhoto = document.getElementById('js-characterPhoto');
 
 
-console.log(playAsHoward);
+console.log(characterPhoto + 'fota');
 
-console.log(pickLizard);
+
 // declaration player and computer veriables
 
 var 
@@ -69,26 +70,31 @@ function setGamePoints() {
 
 
 function haracterPick(pickedHaracter){
-    console.log('wywolano haracterPick')
+    
     switch (pickedHaracter){
         case 'howard':
-            player.name = 'Howard Wolowitc'
+            player.name = 'Howard Wolowitc';
+            characterPhoto.src = 'images/howard-wolowitz.jpg';
+            console.log(characterPhoto);
         break;
         case 'rajesh':
-            player.name = 'Rajesh Koothrappali'
+            player.name = 'Rajesh Koothrappali';
+            characterPhoto.src = 'images/raj_koothrappali.jpg';
         break;
         case 'leonard':
-            player.name = 'Leonard Hofstadter'
+            player.name = 'Leonard Hofstadter';
+            characterPhoto.src = 'images/leonard_big_bang_a_p.jpg';
         break;
         case 'peny':
-            player.name = 'Peny'
+            player.name = 'Peny';
+            characterPhoto.src = 'images/penny.jpg';
         break;
     }
-    console.log(player.name + 'w funkcji haracter pick');
+    
     newGame();
 }
 
-console.log(player.name + 'imie gracza');
+
 
 
 
@@ -97,7 +103,7 @@ function newGame() {
 
 //  player.name = prompt('Please enter your name', 'imię gracza');
  
-console.log(player.name + 'z funkcji newGame');
+
 
   if (player.name) {
     player.score = computer.score = 0;
@@ -175,7 +181,7 @@ function checkRoundWinner(playerPick, computerPick) {
         playerResultElem.innerHTML = "Win!";
         //document.write('wygrywa gracz');
         player.score++;
-        console.log('punkty gracza w funkcji' + player.score);
+        
     } else if (winnerIs == 'computer') {
         computerResultElem.innerHTML = "Win!";
         computer.score++;
@@ -188,7 +194,7 @@ function checkRoundWinner(playerPick, computerPick) {
 
 // seting up points
 function setGamePoints() {
-	console.log('punkty playera z funkcji setGamePoints' + player.score)
+	
     playerPointsElem.innerHTML = player.score;
     computerPointsElem.innerHTML = computer.score;
 }
@@ -226,9 +232,8 @@ playAsHoward.addEventListener('click', function() { haracterPick('howard') });
 playAsRajesh.addEventListener('click', function() { haracterPick('rajesh') });
 playAsLeonard.addEventListener('click', function() { haracterPick('leonard') });
 playAsPeny.addEventListener('click', function() { haracterPick('peny') });
-console.log(playAsHoward);
+
 
 setGameElements();
 //setGamePoints();
 
-console.log('playerma punktuw' + playerPointsElem.innerHTML);

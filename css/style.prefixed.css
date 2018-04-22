@@ -234,4 +234,12 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
+
+.player-photo {
+  margin-top: 10px;
+}
+
+.player-photo img {
+  width: 120px;
+}
 /*# sourceMappingURL=style.prefixed.css.map */

@@ -3,7 +3,7 @@
 
 * {
 	box-sizing: border-box;
-   // border: 1px solid red;
+  //  border: 1px solid red;
 
 }
 
@@ -39,5 +39,14 @@
         height: 120px;
         border-radius: 50%;
         object-fit: cover;
+    }
+}
+
+
+.player-photo {
+    margin-top: 10px;
+
+    img{
+        width: 120px;
     }
 }
