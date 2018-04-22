@@ -13,6 +13,10 @@ var
 // getting a chosen character
 var
     playAsHoward = document.getElementById('js-pickPerson_howard');
+    playAsRajesh = document.getElementById('js-pickPerson_rajesh');
+    playAsLeonard = document.getElementById('js-pickPerson_leonard');
+    playAsRajesh = document.getElementById('js-pickPerson_rajesh');
+    playAsPeny = document.getElementById('js-pickPerson_peny');
 
 
 console.log(playAsHoward);
@@ -69,6 +73,15 @@ function haracterPick(pickedHaracter){
     switch (pickedHaracter){
         case 'howard':
             player.name = 'Howard Wolowitc'
+        break;
+        case 'rajesh':
+            player.name = 'Rajesh Koothrappali'
+        break;
+        case 'leonard':
+            player.name = 'Leonard Hofstadter'
+        break;
+        case 'peny':
+            player.name = 'Peny'
         break;
     }
     console.log(player.name + 'w funkcji haracter pick');
@@ -209,8 +222,10 @@ pickSpock.addEventListener('click', function() { playerPick('spock') });
 
 
 //button with names
-
 playAsHoward.addEventListener('click', function() { haracterPick('howard') });
+playAsRajesh.addEventListener('click', function() { haracterPick('rajesh') });
+playAsLeonard.addEventListener('click', function() { haracterPick('leonard') });
+playAsPeny.addEventListener('click', function() { haracterPick('peny') });
 console.log(playAsHoward);
 
 setGameElements();

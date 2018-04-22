@@ -21,52 +21,102 @@
 <body>
 	<!-- -->
 	<!--	Game title -->
-
+<section class="header">
 	<div class="container">
-  		<h3 class="text-center">
-    		Welcome to the game
-		    <span class="label label-default">Rock</span>
-		    <span class="label label-info">Paper</span>
-		    <span class="label label-danger">Scissors</span>
-		    <span class="label label-danger">Lizard</span>
-		    <span class="label label-danger">Spock</span>
-		</h3>
+		<div class="top-baner"><img src="images/header-poster.jpg" alt="top baner" /></div>
 	</div>
-	
-	<!--	A start button -->	
-	<div id="js-newGameElement" class="container">
-		<div class="row text-center">
-			<button  id="js-newGameButton" class="btn btn-default">New game</button>
+</section>
+
+
+	<!--	A buttons section -->	
+	<section class = "buttons">
+		<div id="js-newGameElement" class="container">
+			<div class="row text-center">
+				<button  id="js-newGameButton" class="btn btn-default" data-toggle="modal" data-target="#myModal1">New game</button>
+				<button  id="" class="btn btn-default" data-toggle="modal" data-target="#myModal2">Check the rules</button>
+			</div>
 		</div>
-	</div>
+	</section>
 
-
-
-
+<!-- MODAL - 1 -->
 	<section class="modal-section">
 		<div class="container">
-		
-		<!--		przycisk modala	-->	
-			<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal">
-				Personal Data
-			</button>
-			
 		<!--	div z modalem	-->
-			<div id="myModal" class="modal fade" role="dialog">
+			<div id="myModal1" class="modal fade" role="dialog">
 				<div class="modal-dialog">
 					<div class="modal-content text-center">
 						<!-- our content -->
-	<!--	Choosing a player -->	
-	<div id="js-playerPickPerson" class="container">
-		<div class="row text-center">
-				<button id="js-pickPerson_howard" class="player_person">howard</button>
-		</div>
-	</div>
-							<div class="modal-footer">
-									
-									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<!--	Choosing a player -->	
+						<div id="js-playerPickPerson" class="container">
+							<div class="row text-center">
+								<div class="col-3">
+									<div id="js-pickPerson_leonard" class="player_person" data-dismiss="modal"> 
+										<img src = "images/leonard_big_bang_a_p.jpg" alt="Howard Wolowitz" />
+										Leonard Hofstadter
+									</div>
+								</div>
+								<div class="col-3">
+									<div id="js-pickPerson_rajesh" class="player_person" data-dismiss="modal"">
+										<img src = "images/raj_koothrappali.jpg" alt="Raj Koothrappali" />
+										Raj Koothrappali
+									</div>
+								</div>
+								<div class="col-3">
+									<div id="js-pickPerson_howard" class="player_person" data-dismiss="modal"">
+										<img src = "images/Howard-wolowitz-the-big-bang-theory-16865313-930-1246.jpg" alt="Howard Wolowitz" />
+										Howard Wolowitz
+									</div>
+								</div>
+								<div class="col-3">
+									<div id="js-pickPerson_peny" class="player_person" data-dismiss="modal">
+										<img src = "images/penny.jpg" alt="Howard Wolowitz" />
+										Peny
+									</div>
+								</div>
 							</div>
-							
+						</div>
+
+						<div class="modal-footer">
+								
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- MODAL - 2 -->
+	<section class="modal-section">
+		<div class="container">
+		<!--	div z modalem	-->
+			<div id="myModal2" class="modal fade" role="dialog">
+				<div class="modal-dialog">
+					<div class="modal-content text-center">
+						<!-- our content -->
+						<!--	Choosing a player -->	
+						
+							<div class="row text-center">
+								"Scissors Cuts Paper <br>
+								Paper Covers Rock <br>
+								Rock Crushes Lizard <br>
+								Lizard Poisons Spock <br>
+								Spock Smashes Scissors <br>
+								Scissors Decapitate <br>
+								Lizard Lizard Eat Paper <br>
+								Paper Disproves Spock <br>
+								Spock Vaporizes Rock <br>
+								And as it always has... <br>
+								Rock Crushes Scissors"<br>
+							</div>
+							<div class="row text-center">
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/Kov2G0GouBw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+							</div>
+						
+						<div class="modal-footer">
+								
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -1,6 +1,9 @@
+@import 'grid';
+
+
 * {
 	box-sizing: border-box;
-    border: 1px solid red;
+   // border: 1px solid red;
 
 }
 
@@ -9,3 +12,32 @@
     width: 120px;
 }
 
+
+.header {
+    .container {
+        margin: 0 auto;
+        .top-baner {
+            text-align: center;
+            margin: 0 auto;
+        }
+    }
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+.modal-section {
+    .container {
+        width: 100%;
+    }
+    .row {
+        padding: 15px 0;
+    }
+    img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}
