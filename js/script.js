@@ -10,6 +10,13 @@ var
     pickLizard = document.getElementById('js-playerPick_lizard'),
 	pickSpock = document.getElementById('js-playerPick_spock');
 
+// getting a chosen character
+var
+    playAsHoward = document.getElementById('js-pickPerson_howard');
+
+
+console.log(playAsHoward);
+
 console.log(pickLizard);
 // declaration player and computer veriables
 
@@ -56,9 +63,29 @@ function setGamePoints() {
     computerPointsElem.innerHTML = computer.score;
 }
 
+
+function haracterPick(pickedHaracter){
+    console.log('wywolano haracterPick')
+    switch (pickedHaracter){
+        case 'howard':
+            player.name = 'Howard Wolowitc'
+        break;
+    }
+    console.log(player.name + 'w funkcji haracter pick');
+    newGame();
+}
+
+console.log(player.name + 'imie gracza');
+
+
+
 // new game function - starting new game
 function newGame() {
-  player.name = prompt('Please enter your name', 'imię gracza');
+
+//  player.name = prompt('Please enter your name', 'imię gracza');
+ 
+console.log(player.name + 'z funkcji newGame');
+
   if (player.name) {
     player.score = computer.score = 0;
     gameState = 'started';
@@ -68,6 +95,9 @@ function newGame() {
     setGamePoints(); 
   }
 }
+
+
+
 
 // game state function
 function setGameElements() {
@@ -82,7 +112,7 @@ function setGameElements() {
     case 'notStarted':
     default:
         newGameElem.style.display = 'block';
-        pickElem.style.display = 'none';
+        pickElem.style.display = 'none';    //none
         resultsElem.style.display = 'none';
   }
 }
@@ -156,7 +186,7 @@ function finishGame(){
 	var wygrywa = player.name;
 	if (player.score == 10 || computer.score == 10){
 		if (computer.score > player.score){
-			wygrywa = 'Komputer';
+			wygrywa = 'Dr Sheldon Kooper';
 		}
 		alert('koniec gry. Wygrywa ' + wygrywa);
 		gameState = 'ended';
@@ -177,6 +207,11 @@ pickScissors.addEventListener('click', function() { playerPick('scissors') });
 pickLizard.addEventListener('click', function() { playerPick('lizard') });
 pickSpock.addEventListener('click', function() { playerPick('spock') });
 
+
+//button with names
+
+playAsHoward.addEventListener('click', function() { haracterPick('howard') });
+console.log(playAsHoward);
 
 setGameElements();
 //setGamePoints();

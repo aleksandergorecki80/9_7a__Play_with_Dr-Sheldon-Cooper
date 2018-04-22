@@ -5,7 +5,7 @@
   "scripts": {
     "test": "npm-run-all test:*",
     "test:html": "globstar nu-html-checker *.html",
-    "test:js": "jshint js/",
+    
     "init-project": "npm install && npm-run-all init:*",
     "init:dirs": "mkdirp sass css vendor images js",
     "init:files": "touch README.md index.html sass/style.scss js/script.js",
@@ -39,11 +39,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aleksandergorecki80/9_7a__Play_with_Dr-Sheldon-Cooper.git.git"
+    "url": "git+https://github.com/aleksandergorecki80/9_7__JavaScript-Game.git"
   },
   "bugs": {
-    "url": "https://github.com/aleksandergorecki80/9_7a__Play_with_Dr-Sheldon-Cooper/issues"
+    "url": "https://github.com/aleksandergorecki80/9_7__JavaScript-Game/issues"
   },
-  "homepage": "https://github.com/aleksandergorecki80/9_7a__Play_with_Dr-Sheldon-Cooper#readme",
+  "homepage": "https://github.com/aleksandergorecki80/9_7__JavaScript-Game#readme",
   "description": ""
 }

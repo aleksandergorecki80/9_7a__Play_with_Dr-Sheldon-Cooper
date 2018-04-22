@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> -->
 	
 	<title>9_7__JavaScript-Game</title>
 	
@@ -40,12 +40,38 @@
 		</div>
 	</div>
 
+
+
+
+	<section class="modal-section">
+		<div class="container">
+		
+		<!--		przycisk modala	-->	
+			<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal">
+				Personal Data
+			</button>
+			
+		<!--	div z modalem	-->
+			<div id="myModal" class="modal fade" role="dialog">
+				<div class="modal-dialog">
+					<div class="modal-content text-center">
+						<!-- our content -->
 	<!--	Choosing a player -->	
 	<div id="js-playerPickPerson" class="container">
 		<div class="row text-center">
-				<div id="js-pickPerson_howard" class="player_person">howard</div>
+				<button id="js-pickPerson_howard" class="player_person">howard</button>
 		</div>
 	</div>
+							<div class="modal-footer">
+									
+									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							</div>
+							
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 
 	<!--	Choosing a wepon -->	
@@ -130,7 +156,9 @@
 </div>
 
 
-
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 <script type="text/javascript" src="js/script.js"></script>
 </body>
