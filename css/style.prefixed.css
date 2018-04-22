@@ -254,12 +254,12 @@ body {
      object-fit: cover;
 }
 
-.rules-section {
-  display: none;
-}
-
 .rules-section .row {
   margin: 20px;
+}
+
+#js-rules-section {
+  display: none;
 }
 
 .player-photo {

@@ -45,7 +45,7 @@ var
     roundNumber = document.getElementById('js-round-counter'),
     ruleSection = document.getElementById('js-rules-section');
 
-console.log(ruleSection);
+console.log(ruleSection.display);
 
 //	computer points and player points and name displayed in score table
 var 
@@ -128,7 +128,7 @@ function setGameElements() {
         playerResultElem.innerHTML = '';
         computerResultElem.innerHTML = '';
         
-
+        ruleSection.style.display = "none";
       break;
     case 'ended':
         newGameBtn.innerText = 'Try again';
@@ -228,10 +228,10 @@ function roundCounter(){
 
 function showRulesSection() {
     
-    if (ruleSection.style.display === "none") {
-        ruleSection.style.display = "block";
-    } else {
+    if (ruleSection.style.display == "block") {
         ruleSection.style.display = "none";
+    } else {
+        ruleSection.style.display = "block";
     }
 }
 
@@ -271,6 +271,8 @@ playAsHoward.addEventListener('click', function() { haracterPick('howard') });
 playAsRajesh.addEventListener('click', function() { haracterPick('rajesh') });
 playAsLeonard.addEventListener('click', function() { haracterPick('leonard') });
 playAsPeny.addEventListener('click', function() { haracterPick('peny') });
+
+//other buttons
 showRules.addEventListener('click', function() { showRulesSection() });
 
 

@@ -60,10 +60,13 @@ body {
 }
 
 .rules-section {
-    display: none;
     .row {
         margin: 20px;
-    }
+    }  
+}
+
+#js-rules-section {
+    display: none;
 }
 
 
