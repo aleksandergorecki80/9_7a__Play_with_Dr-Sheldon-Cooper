@@ -11,6 +11,8 @@ var
     pickSpock = document.getElementById('js-playerPick_spock'),
 	showRules = document.getElementById('js-rules-bt');
 
+    console.log(showRules);
+
 // getting a chosen character
 var
     playAsHoward = document.getElementById('js-pickPerson_howard');
@@ -42,6 +44,8 @@ var
     messageElem = document.getElementById('js-message');
     roundNumber = document.getElementById('js-round-counter'),
     ruleSection = document.getElementById('js-rules-section');
+
+console.log(ruleSection);
 
 //	computer points and player points and name displayed in score table
 var 
@@ -228,18 +232,8 @@ function showRulesSection() {
         ruleSection.style.display = "block";
     } else {
         ruleSection.style.display = "none";
-        stopVideo();
     }
 }
-
-
-function stopVideo() {
-    var iframe = document.querySelector('iframe');
-    if ( iframe ) {
-        var iframeSrc = iframe.src;
-        iframe.src = iframeSrc;
-    }
-};
 
 
 //finishing the game
