@@ -208,9 +208,12 @@ body {
 }
 
 .flex-center {
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
 }
 
 .header .container {
@@ -247,7 +250,8 @@ body {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .rules-section .row {
@@ -321,5 +325,4 @@ body {
   font-weight: bold;
   color: #014682;
 }
-
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.prefixed.css.map */
