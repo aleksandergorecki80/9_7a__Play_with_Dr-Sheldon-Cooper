@@ -27,7 +27,7 @@
     "autoprefixer-cli": "^1.0.0",
     "browser-sync": "^2.23.6",
     "globstar": "^1.0.0",
-    "node-sass": "^4.8.3",
+    "node-sass": "^7.0.0",
     "npm-run-all": "^4.1.2",
     "nu-html-checker": "^0.1.0",
     "onchange": "^3.3.0"
